@@ -4,6 +4,7 @@ import { AuthModule } from './auth/auth.module';
 import { GlobalClientsModule } from './global-clients/global-clients.module';
 import { ConfigModule } from '@nestjs/config';
 import appConfig from './config/app.config';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -11,6 +12,6 @@ import appConfig from './config/app.config';
     GlobalClientsModule,
     AuthModule,
   ],
-  controllers: [TasksController],
+  controllers: [TasksController, AppController],
 })
 export class AppModule {}
